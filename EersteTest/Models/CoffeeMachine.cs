@@ -7,18 +7,14 @@ namespace EersteTest.Models
 {
     public class CoffeeMachine
     {
+
         public int coffeeMachineId { get; set; }
-        
-        private List<Product> products;
+
+        public virtual ICollection<Product> products { get; set; }
 
         public CoffeeMachine()
         {
             products = new List<Product>();
-        }
-
-        public List<Product> Products
-        {
-            get { return products; }
         }
 
         public void AddProduct(Product product)

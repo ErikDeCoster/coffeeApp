@@ -7,18 +7,13 @@ namespace EersteTest.Models
 {
     public class Product
     {
-        private string _productName;
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
 
         public Product(string productName)
         {
-            _productName = productName;
-        }
-    public string ProductName
-        {
-            get { return _productName; }
-            set { _productName = value; }
+            ProductName = productName;
         }
 
-        public int ProductId { get; set; }
     }
 }

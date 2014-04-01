@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Web.Http;
 using System.Web.Mvc;
 using EersteTest.Models;
 using EersteTest.ViewModels;
@@ -30,8 +31,13 @@ namespace EersteTest.Controllers
             if (coffeeMachine != null) return coffeeMachine.getCoffeeMachineId();
             else
             {
-                return 1;
+                return 0;
             }
+        }
+
+        public string GetHelloWorld()
+        {
+            return "Hello World";
         }
     }
 }
